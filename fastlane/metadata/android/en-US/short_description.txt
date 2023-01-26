@@ -1,0 +1,1 @@
+A simple app that pulls out trivia out of OpenTriviaDB and challenges you.
