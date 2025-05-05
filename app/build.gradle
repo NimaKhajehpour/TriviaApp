@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'com.nima.triviaapp'
-    compileSdk 35
+    compileSdk 33
 
     dependenciesInfo {
         // Disables dependency metadata when building APKs.
