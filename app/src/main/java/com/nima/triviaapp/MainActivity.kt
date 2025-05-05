@@ -15,14 +15,11 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.nima.triviaapp.model.Questions
 import com.nima.triviaapp.navigation.QuestionNavigation
 import com.nima.triviaapp.screens.QuestionViewModel
 import com.nima.triviaapp.ui.theme.TriviaAppTheme
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

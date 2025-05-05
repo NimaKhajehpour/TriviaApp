@@ -3,9 +3,8 @@ package com.nima.triviaapp.repository
 import android.util.Log
 import com.nima.triviaapp.network.QuestionsApi
 import com.nima.triviaapp.model.Questions
-import javax.inject.Inject
 
-class QuestionRepository @Inject constructor(private val api: QuestionsApi) {
+class QuestionRepository (private val api: QuestionsApi) {
     private var data: Questions? = null
 
     suspend fun getQuestions(amount : String, category: String,

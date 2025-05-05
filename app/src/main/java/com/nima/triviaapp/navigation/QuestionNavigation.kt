@@ -1,7 +1,6 @@
 package com.nima.triviaapp.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavArgument
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -12,9 +11,10 @@ import com.nima.triviaapp.screens.EndScreen
 import com.nima.triviaapp.screens.HomeScreen
 import com.nima.triviaapp.screens.QuestionViewModel
 import com.nima.triviaapp.screens.TriviaScreen
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun QuestionNavigation(viewModel: QuestionViewModel = hiltViewModel()){
+fun QuestionNavigation(viewModel: QuestionViewModel = koinViewModel()){
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = QuestionScreens.HomeScreen.name){
         composable(QuestionScreens.HomeScreen.name){
