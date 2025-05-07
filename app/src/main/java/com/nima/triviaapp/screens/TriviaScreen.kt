@@ -42,9 +42,9 @@ fun TriviaScreen(
 
     val questions = produceState<Questions?>(initialValue = null){
         value = viewModel.getQuestions(amount = amount!!,
-            category = if (category!! == "null") "" else category,
-            difficulty = if (difficulty!! == "null") "" else difficulty,
-            type = if (type!! == "null") "" else type)
+            category = category!!,
+            difficulty = difficulty!!,
+            type = type!!)
     }.value
 
     Surface(

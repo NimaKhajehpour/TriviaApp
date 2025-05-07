@@ -273,25 +273,25 @@ fun HomeScreen(
             Button(
                 onClick =
                 {
+                    var categoryToReturn = ""
+                    var difficultyToReturn = when(difficultyState){
+                        1f -> "easy"
+                        2f -> "medium"
+                        3f -> "hard"
+                        else -> ""
+                    }
+                    var typeToReturn = when(questionTypeState){
+                        1f -> "multiple"
+                        2f -> "boolean"
+                        else -> ""
+                    }
+                    if (selectedCategory != 0)
+                        categoryToReturn = selectedCategory.toString()
+                    else
+                        categoryToReturn = ""
+
                 navController.navigate(QuestionScreens.TriviaScreen.name+
-                        "/${amountValueState.toInt()}/${
-                            if (selectedCategory != 0){
-                                selectedCategory.toString()
-                            }else {null}
-                        }/${
-                            when(difficultyState){
-                                1f -> "easy"
-                                2f -> "medium"
-                                3f -> "hard"
-                                else -> null
-                            }
-                        }/${
-                            when(questionTypeState){
-                                1f -> "multiple"
-                                2f -> "boolean"
-                                else -> null
-                            }
-                        }")
+                        "/${amountValueState.toInt()}/${categoryToReturn}/${difficultyToReturn}/${typeToReturn}")
                 },
                 modifier = Modifier
                     .padding(top = 16.dp, start = 32.dp, end = 32.dp, bottom = 32.dp)
